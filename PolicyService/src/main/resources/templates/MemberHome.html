@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Member Home Page</title>
+</head>
+<body>
+	<section>
+	<div class="container">
+		</br>
+		<h2>Member Portal</h2>
+		</br>
+		<div class="btn-group-vertical">
+		<a class="btn btn-primary" th:href="@{/showClaimPage}" role="button" aria-current="page">Submit Claim</a>
+		</br>
+		<a class="btn btn-primary" th:href="@{/showClaimPage2}" role="button" aria-current="page">View Claim Status</a>
+		</br>
+		<a class="btn btn-primary" href="adminleaveapprovalretrieve.jsp" role="button" aria-current="page">View Bill Details</a>
+		</br>
+		</div>
+	</div>
+		
+	</section>
+
+</body>
+</html>

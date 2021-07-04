@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>CLAIM MANAGEMENT</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<style>
+body, html {
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.479);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Position text in the middle of the page/image */
+.center-box {
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	margin: auto;
+	width: 500px;
+	height: 360px;
+	padding: 40px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.055);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.borderIt {
+	border: 1px solid rgba(255, 255, 255, 0.342);
+	border-radius: 30px;
+	background-color: rgba(0, 0, 0, 0.178);
+}
+</style>
+<link rel='stylesheet' type='text/css' media='screen'
+	href='CSS\Common.css'>
+</head>
+
+<body class="bg">
+
+
+	<!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary1">
+		<div class="container-fluid">
+			<a class="navbar-brand" th:href="@{/memberHome}"
+				style="text-color: white;">Claims Management System</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<ul class="navbar-nav ml-auto mb-2 mb-lg-0 text-uppercase">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/}">Home</a></li>
+
+					<li class="nav-item"><a class="nav-link" th:href="@{about/}"
+						href="#">About</a></li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav> -->
+
+
+
+
+	<div class='center-box borderIt'>
+		<div class="text-dark">
+			<h2 style="margin-top: 0; color: white">SIGN IN</h2>
+
+			<div class="w-75 p-3"></div>
+			<form style="color: white" action='/memberHome' method="POST">
+				<p style="font-weight: lighter; margin: 0; padding: 0; color: white"
+					th:text="${message}"></p>
+				<div class="form-group text-left font-weight-normal">
+					<!-- <label for="exampleInputEmail1">User id</label> -->
+					<input type="text" class="form-control" name="username"
+						aria-describedby="emailHelp" placeholder="User Id" required>
+				</div>
+				<div class="form-group text-left font-weight-normal">
+					<!-- <label for="exampleInputPassword1">Password</label> -->
+					<input type="password" class="form-control" name="password"
+						placeholder="Password" required>
+				</div>
+				<!-- <button type="submit" class="btn btn-info">Submit</button> -->
+				<button type='submit' class="btn btn-success">Log
+					In</button>
+			</form>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

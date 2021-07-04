@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>This is home page</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<br>
+			<h1>Member Portal Service</h1>
+			<hr>
+			<h2>Submit Claim Here</h2>
+
+			<form action="#" th:action="@{/submitClaim}"
+				th:object="${memberSubmitClaim}" method="POST">
+				<input type="number" th:field="*{policyId}"
+					placeholder="Enter Policy Id" class="form-control mb-4 col-4">
+
+				<input type="number" th:field="*{memberId}"
+					placeholder="Enter Member Id" class="form-control mb-4 col-4">
+
+				<input type="number" th:field="*{hospitalId}"
+					placeholder="Enter hospital Id" class="form-control mb-4 col-4">
+
+				<input type="number" th:field="*{totalBill}"
+					placeholder="Enter total bill" class="form-control mb-4 col-4">
+
+				<input type="number" th:field="*{totalClaimedAmt}"
+					placeholder="Enter your Claim Amount"
+					class="form-control mb-4 col-4">
+
+				<button type="submit" class="btn btn-info col-2">Submit
+					Claim</button>
+			</form>
+
+			<hr>
+
+			<a th:href="@{/memberHome}"> Back to Member Portal</a>
+		</div>
+	</section>
+
+</body>
+</html>
+
